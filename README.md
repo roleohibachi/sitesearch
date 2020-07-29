@@ -8,6 +8,8 @@ But you can't search a list of sites easily. You have to build a search string s
 
 ## Usage:
 
+[Try it now](https://htmlpreview.github.io/?https://raw.githubusercontent.com/roleohibachi/sitesearch/master/index.htm)
+
 - Right click - copy any bookmark folder (or other URL list) and paste it into the 'sites' box. 
 - Then put your search term in the query box.
 - Then click search to search only those sites.
