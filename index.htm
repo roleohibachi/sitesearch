@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+function searchsites() {
+  var sitelist=document.getElementById("sites").value; 
+  //var n=str.replace(/^\(^http\).*/g,"");
+  var sitearray = sitelist.match(/\bhttps?:\/\/\S+?\//gi);
+  var querystring = "";
+  sitearray.forEach(function(item, index, array) {
+    querystring += "site:"+item+" OR ";
+  })
+  querystring = querystring.slice(0, -4);
+  var queryterm=document.getElementById("q").value; 
+  
+  querystring+=" "+queryterm;
+
+  //document.getElementById("sites").value=querystring;
+  window.location.href = 'https://www.google.com/search?q='+encodeURIComponent(querystring);
+}
+</script>
+
+</head>
+<body>
+<p>Right click - copy any bookmark folder (or other URL list) and paste it into the 'sites' box. Then put your search term in the query box. Then click search to search only those sites.</p>
+<br />
+<textarea id=sites>Sites</textarea>
+<br />
+<input type=text id=q value=Query />
+<br />
+<input type=button onclick=searchsites() value=Search />
+</body>
+</html>
